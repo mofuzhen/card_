@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.page-tabbar{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+	overflow-y: scroll;
+    // 底图背景
+	.card_bg{
+		width: 100%;
+		height: 2.5rem;
+		img{
+			width: 100%;
+			height: 2.5rem;
+		}
+	}
+    // 悬浮卡片
+	.card_picture{
+		margin: 0 0.18rem;
+		box-shadow:6px 6px 33px 3px rgba(229,229,229,1);
+		border-radius: 0.1rem;
+		height: 1.3rem;
+		position: relative;
+		top: -0.4rem;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+		.cardPiture_top{
+            position: absolute;
+				left: 0.9rem;
+                top: 0.41rem;
+			h3{
+                font-size: 0.24rem;
+			}
+			p{
+                margin-top: 0.09rem;
+				font-size: 0.15rem;
+				
+			}
+        }
+        .card-img{
+            // position: absolute;
+            padding-top:0.25rem;
+            // left:0;
+            img{
+                width:0.85rem;
+                height:0.85rem;
+            }
+        }
+	}
+	// 图片上传样式
+	.image-upload{
+		width:100%;
+		display: flex;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding:0 .4rem;
+		.image-upload-item{
+			position: relative;
+			width:1.2rem;
+			border:1px solid #999;
+			height:1.6rem;
+			border-radius: .08rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			flex-direction: column;
+			// #img_flie{
+			// 	position: absolute;
+			// 	width:100%;
+			// 	height:100%;
+			// 	z-index: 999;
+			// }
+			.a-upload {
+				// width:70%;
+				// // text-align: center;
+				// padding: 1px 10px;
+				// // height: 70px;
+				// line-height: 70px;
+				// position: relative;
+				// cursor: pointer;
+				// color: #888;
+				// // background: #fafafa;
+				// // border: 1px solid #ddd;
+				// border-radius: 4px;
+				// overflow: hidden;
+				// text-decoration: none;
+				// // display: block;
+				// font-size: 20px;
+				// zoom: 1;
+				width:70%;
+				position: relative;
+				display: inline-block;
+				// border: 1px solid #99D3F5;
+				border-radius: 4px;
+				// padding: 4px 12px;
+				overflow: hidden;
+				color: #888;
+				text-decoration: none;
+				text-indent: 0;
+				line-height: 0.3rem;
+				font-size: 20px;
+				input {
+					position: absolute;
+					// display: inline-block; 	 	
+					right: 0;
+					top: 0;
+					font-size: 100px;
+					// height:50px;
+					opacity: 0;
+				}
+				// :hover {
+				// 	display: inline;
+				// 	color: #444;
+				// 	background: #eee;
+				// 	border-color: #ccc;
+				// 	text-decoration: none
+				// }
+				.add{
+					
+					display: block;
+					width:50%;
+					// height:30%;
+				}
+			}
+			
+			.user-image{
+				width:80%;
+			}
+			
+			p{
+				padding-top:.06rem;
+				text-align: center;
+				font-size: .14rem;
+				width:100%;
+			}
+		}
+	}
+}
