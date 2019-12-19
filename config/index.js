@@ -3,6 +3,7 @@ const path = require('path');
 const exec = require('child_process').exec;
 const env = require('./env');
 const { deleleDirAll, getProcessArgs } = require('./utils')
+const proxyServer = require('./proxy/app')
 
 const args = getProcessArgs()
 // 是否是开发环境
@@ -17,34 +18,24 @@ if (!inputpath) {
   return;
 }
 
-// if (dev) {
-//   const command = `parcel src/pages/${inputpath}/index.html -d dist/${outputpath} --no-cache`;
-//   exec(command, (error, stdout, stderr) => {
-//     console.error('error ', error)
-//     console.log('stdout ', stdout)
-//     console.error('stderr ', stderr)
-//   })
-//   return;
-// }
-
-if (dev) {
-    const command = `parcel src/pages/${inputpath}/index.html -d dist/${outputpath} --no-cache`;
-    // console.log(command)
-    const worker = exec(command, {})
-    
-    worker.stdout && worker.stdout.on('data', function (data) {
-      console.log(data);
-    });
-    worker.stderr && worker.stderr.on('data', function (data) {
-      console.error(data);
-    });
-    worker.error && worker.error.on('data', function (data) {
-      console.error(data);
-    });
-    
-    return;
-  }
+if (dev) {
+  const command = `parcel src/pages/${inputpath}/index.html -d dist/${outputpath} --no-cache`;
+  const worker = exec(command, {})
   
+  worker.stdout && worker.stdout.on('data', function (data) {
+    console.log(data);
+  });
+  worker.stderr && worker.stderr.on('data', function (data) {
+    console.error(data);
+  });
+  worker.error && worker.error.on('data', function (data) {
+    console.error(data);
+  });
+
+  proxyServer()
+  
+  return;
+}
 
 const config = require('./build')
 const outFilename = config.input.filename || 'index.html'
