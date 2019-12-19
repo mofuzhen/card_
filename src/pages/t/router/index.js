@@ -1,6 +1,7 @@
 import Vue from 'vue/dist/vue.esm.js';
 import Router from 'vue-router'
 import Test from '../components/Test'
+import Home from '../components/home'
 Vue.use(Router)
 
 export default new Router({
@@ -14,12 +15,7 @@ export default new Router({
         path: '/home',
         name: 'Home',
         component: Home
-      },
-      {
-        path: '/rewards',
-        name: 'Rewards',
-        component: Rewards
-      },
+      }
     ]
   })
   

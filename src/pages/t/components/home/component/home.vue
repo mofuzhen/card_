@@ -25,7 +25,8 @@
               <!-- <input type="file" id="img_flie"/> -->
               <a href="javascript:;" class="a-upload">
               <img class="add" src="../../../../../components/img/添加.png" alt="">
-              <input id='upload' type="file" name="" placeholder="点击" @change="upload">点击上传
+              <input id='upload' type="file" name="" placeholder="点击" @change="upload">
+                点击上传
               </a>
            </div>
       </div>
@@ -44,30 +45,10 @@ export default {
       upload(e){
         var picture_=e.target.files[0]
         console.log(picture_)
-        console.log(picture_.name)
-        this.src=require("../../../../../components/img/添加.png")
-      } 
-        // showActionSheet(){
-        //     var bts = [{  
-    	  //       title: "拍照"  
-    	  //   }, {  
-    	  //       title: "从相册选择"  
-        //     }];  
-        //     // this.onPlusReady(function () {
-        //         plus.nativeUI.actionSheet({  
-        //                 cancel: "取消",  
-        //                 buttons: bts  
-        //             },  
-        //             function(e) {  
-        //                 if (e.index == 1) {  
-        //                     // getImage();  
-        //                 } else if (e.index == 2) {  
-        //                     // galleryImgs();  
-        //                 }  
-        //             }  
-        //         );  
-        //     // })
-        // }
+        var myfrom=new FormData();
+        myfrom.append('file',picture_)
+        console.log(myfrom)
+      },
     }
 };
 </script>

@@ -119,8 +119,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"../../components/img/艾克.png":[function(require,module,exports) {
 module.exports = "/艾克.50511e31.png";
-},{}],"../../components/img/添加.png":[function(require,module,exports) {
-module.exports = "/添加.75ffb7a5.png";
 },{}],"components/home/component/home.vue":[function(require,module,exports) {
 "use strict";
 
@@ -128,6 +126,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+//
 //
 //
 //
@@ -173,30 +172,10 @@ var _default = {
     upload: function upload(e) {
       var picture_ = e.target.files[0];
       console.log(picture_);
-      console.log(picture_.name);
-      this.src = require("../../../../../components/img/添加.png");
-    } // showActionSheet(){
-    //     var bts = [{  
-    //       title: "拍照"  
-    //   }, {  
-    //       title: "从相册选择"  
-    //     }];  
-    //     // this.onPlusReady(function () {
-    //         plus.nativeUI.actionSheet({  
-    //                 cancel: "取消",  
-    //                 buttons: bts  
-    //             },  
-    //             function(e) {  
-    //                 if (e.index == 1) {  
-    //                     // getImage();  
-    //                 } else if (e.index == 2) {  
-    //                     // galleryImgs();  
-    //                 }  
-    //             }  
-    //         );  
-    //     // })
-    // }
-
+      var myfrom = new FormData();
+      myfrom.append('file', picture_);
+      console.log(myfrom);
+    }
   }
 };
 exports.default = _default;
@@ -241,7 +220,7 @@ exports.default = _default;
             },
             on: { change: _vm.upload }
           }),
-          _vm._v("点击上传\n          ")
+          _vm._v("\n            点击上传\n          ")
         ])
       ])
     ])
@@ -309,7 +288,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../../../../components/img/艾克.png":"../../components/img/艾克.png","../../../../../components/img/添加.png":"../../components/img/添加.png","./..\\..\\..\\..\\..\\components\\img\\底图.png":[["底图.f5400a59.png","../../components/img/底图.png"],"../../components/img/底图.png"],"./..\\..\\..\\..\\..\\components\\img\\艾克.png":[["艾克.50511e31.png","../../components/img/艾克.png"],"../../components/img/艾克.png"],"./..\\..\\..\\..\\..\\components\\img\\添加.png":[["添加.75ffb7a5.png","../../components/img/添加.png"],"../../components/img/添加.png"],"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../../../../../components/img/艾克.png":"../../components/img/艾克.png","./..\\..\\..\\..\\..\\components\\img\\底图.png":[["底图.f5400a59.png","../../components/img/底图.png"],"../../components/img/底图.png"],"./..\\..\\..\\..\\..\\components\\img\\艾克.png":[["艾克.50511e31.png","../../components/img/艾克.png"],"../../components/img/艾克.png"],"./..\\..\\..\\..\\..\\components\\img\\添加.png":[["添加.75ffb7a5.png","../../components/img/添加.png"],"../../components/img/添加.png"],"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../../../node_modules/vue-hot-reload-api/dist/index.js","vue":"../../../node_modules/vue/dist/vue.runtime.esm.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -337,7 +316,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58253" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49823" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

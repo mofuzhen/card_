@@ -69,48 +69,22 @@
 			justify-content: center;
 			overflow: hidden;
 			flex-direction: column;
-			// #img_flie{
-			// 	position: absolute;
-			// 	width:100%;
-			// 	height:100%;
-			// 	z-index: 999;
-			// }
 			.a-upload {
-				// width:70%;
-				// // text-align: center;
-				// padding: 1px 10px;
-				// // height: 70px;
-				// line-height: 70px;
-				// position: relative;
-				// cursor: pointer;
-				// color: #888;
-				// // background: #fafafa;
-				// // border: 1px solid #ddd;
-				// border-radius: 4px;
-				// overflow: hidden;
-				// text-decoration: none;
-				// // display: block;
-				// font-size: 20px;
-				// zoom: 1;
 				width:70%;
 				position: relative;
 				display: inline-block;
-				// border: 1px solid #99D3F5;
-				border-radius: 4px;
-				// padding: 4px 12px;
 				overflow: hidden;
 				color: #888;
 				text-decoration: none;
 				text-indent: 0;
 				line-height: 0.3rem;
-				font-size: 20px;
+				font-size: 0.17rem;
+				text-align: center;
 				input {
-					position: absolute;
-					// display: inline-block; 	 	
+					position: absolute; 	
 					right: 0;
 					top: 0;
 					font-size: 100px;
-					// height:50px;
 					opacity: 0;
 				}
 				// :hover {
@@ -121,7 +95,7 @@
 				// 	text-decoration: none
 				// }
 				.add{
-					
+					margin:0 auto;
 					display: block;
 					width:50%;
 					// height:30%;
@@ -139,5 +113,65 @@
 				width:100%;
 			}
 		}
+	}
+}
+
+.rewards{
+	width:100%;
+	height:100%;
+	// display:flex;
+	// justify-content: center;
+	// 悬浮卡片
+	.rewards_picture{
+		margin: 1rem 0.18rem 0.18rem;
+		box-shadow:6px 6px 33px 3px rgba(229,229,229,1);
+		border-radius: 0.1rem;
+		height: 1.3rem;
+		position: relative;
+		top: -0.4rem;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+		.rewardsPiture_top{
+            position: absolute;
+				left: 0.9rem;
+				top: 0.41rem;
+			h3{
+                font-size: 0.24rem;
+			}
+			p{
+                margin-top: 0.04rem;
+				font-size: 0.18rem;
+				color:'red'
+			}
+        }
+        .rewards-img{
+            // position: absolute;
+            padding-top:0.25rem;
+            // left:0;
+            img{
+                width:0.85rem;
+                height:0.85rem;
+            }
+        }
+	}
+	.input{
+		display:flex;
+		margin: 0 auto;
+		flex-direction: column;
+		.input-item{
+			display: flex;
+			margin:0.2rem 0.3rem 0.2rem 0.3rem;
+			border-bottom: 1px solid #999;
+			input{
+				// display:block;
+				width:100%;
+				height:0.3rem;
+				padding:0;
+				border:none;
+				font-size: 0.15rem;
+			}
+		}
+		
 	}
 }

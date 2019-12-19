@@ -99,6 +99,194 @@
   background-color: #FF5D6D;
 }
 
+.page-tabbar .mint-tab-item {
+  padding: 15px 0;
+}
+.page-tabbar .mint-tab-item .mint-tab-item-label {
+  font-size: 15px;
+}
+.page-tabbar .mt-tab-item {
+  color: #fff;
+}
+.tool-bar {
+  width: 100%;
+  height: 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: 0 0 0.16rem rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e5e5e5;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.tool-bar-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tool-bar-item-name {
+  font-size: 0.14rem;
+}
+.tool-bar-item-name-h {
+  color: #fff;
+  background: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.page-tabbar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.page-tabbar .card_bg {
+  width: 100%;
+  height: 2.5rem;
+}
+.page-tabbar .card_bg img {
+  width: 100%;
+  height: 2.5rem;
+}
+.page-tabbar .card_picture {
+  margin: 0 0.18rem;
+  box-shadow: 6px 6px 33px 3px #e5e5e5;
+  border-radius: 0.1rem;
+  height: 1.3rem;
+  top: -0.4rem;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.page-tabbar .card_picture .cardPiture_top {
+  position: absolute;
+  left: 0.9rem;
+  top: 0.41rem;
+}
+.page-tabbar .card_picture .cardPiture_top h3 {
+  font-size: 0.24rem;
+}
+.page-tabbar .card_picture .cardPiture_top p {
+  margin-top: 0.09rem;
+  font-size: 0.15rem;
+}
+.page-tabbar .card_picture .card-img {
+  padding-top: 0.25rem;
+}
+.page-tabbar .card_picture .card-img img {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+.page-tabbar .image-upload {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+}
+.page-tabbar .image-upload .image-upload-item {
+  position: relative;
+  width: 1.2rem;
+  border: 1px solid #999;
+  height: 1.6rem;
+  border-radius: 0.08rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+.page-tabbar .image-upload .image-upload-item .a-upload {
+  width: 70%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #888;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 0.3rem;
+  font-size: 0.17rem;
+  text-align: center;
+}
+.page-tabbar .image-upload .image-upload-item .a-upload input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 100px;
+  opacity: 0;
+}
+.page-tabbar .image-upload .image-upload-item .a-upload .add {
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+}
+.page-tabbar .image-upload .image-upload-item .user-image {
+  width: 80%;
+}
+.page-tabbar .image-upload .image-upload-item p {
+  padding-top: 0.06rem;
+  text-align: center;
+  font-size: 0.14rem;
+  width: 100%;
+}
+.rewards {
+  width: 100%;
+  height: 100%;
+}
+.rewards .rewards_picture {
+  margin: 1rem 0.18rem 0.18rem;
+  box-shadow: 6px 6px 33px 3px #e5e5e5;
+  border-radius: 0.1rem;
+  height: 1.3rem;
+  top: -0.4rem;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.rewards .rewards_picture .rewardsPiture_top {
+  position: absolute;
+  left: 0.9rem;
+  top: 0.41rem;
+}
+.rewards .rewards_picture .rewardsPiture_top h3 {
+  font-size: 0.24rem;
+}
+.rewards .rewards_picture .rewardsPiture_top p {
+  margin-top: 0.04rem;
+  font-size: 0.18rem;
+  color: 'red';
+}
+.rewards .rewards_picture .rewards-img {
+  padding-top: 0.25rem;
+}
+.rewards .rewards_picture .rewards-img img {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+.rewards .input {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.rewards .input .input-item {
+  display: flex;
+  margin: 0.2rem 0.3rem 0.2rem 0.3rem;
+  border-bottom: 1px solid #999;
+}
+.rewards .input .input-item input {
+  width: 100%;
+  height: 0.3rem;
+  padding: 0;
+  border: none;
+  font-size: 0.15rem;
+}
+
 /* Cell Component */
 /* Header Component */
 /* Button Component */

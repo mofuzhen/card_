@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'Hello-Parcel',
   data() {
@@ -58,7 +59,13 @@ export default {
 
   },
   mounted(){
-    
+      // axios.get('https://app.playplus.cn/playboom/api/sign/getsign')
+      //   .then(res=>{
+      //     console.log(res)
+      //   })
+      //   .catch(err=>{
+      //     console.log(err)
+      //   })
   }
 }
 </script>
