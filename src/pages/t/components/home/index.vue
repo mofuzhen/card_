@@ -1,8 +1,8 @@
 <template>
   <div class='index'>
       <!-- 动态组件 -->
-      <component :is="currentComponentId"></component>
-      <tabbar @onChangeFragment="onChangeFragment"></tabbar> 
+      <component :is="currentComponentId" @onChangeTabbar="onChangeTabbar"></component>
+      <tabbar @onChangeFragment="onChangeFragment" ref="tabbar"></tabbar> 
   </div>
 </template>
 
@@ -22,6 +22,9 @@ export default {
     'rewards' : ()=> import('./component/rewards')
   },
   methods:{
+    onChangeTabbar(item){
+       this.$refs.tabbar.onChangeFragment(item,1)
+    },
     // 组件切换
     onChangeFragment(componentName){
       // 传入参数值要等于异步组件的名称

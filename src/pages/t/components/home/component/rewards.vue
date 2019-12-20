@@ -14,13 +14,13 @@
     <!-- 收货信息 -->
     <div class='input'>
       <div class='input-item'>
-        <input type="text" placeholder="收货手机号">
+        <input type="text" placeholder="收件人姓名">
       </div>
       <div class='input-item'>
-        <input type="text" placeholder="手机号密码">
+        <input type="text" placeholder="收件人手机号">
       </div>
       <div class='input-item'>
-        <input type="text" placeholder="收货地址">
+        <input type="text" placeholder="收件人收货地址">
       </div>
   </div>
 </template>

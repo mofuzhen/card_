@@ -8,7 +8,7 @@
       <div class="card_phone">
         <div class="cardPhone_top">
           <img src="../../../../components/img/phone.png" alt="">
-          <h3>小怪艾克</h3>
+          <span>{{title}}</span>
         </div>
         <p>购课用户打卡送礼啦</p>
       </div>
@@ -27,23 +27,26 @@
      </div>
      <!-- 状态按钮 -->
      <div class="btn">
-       <button disabled v-show="status==2">活动未开始</button>
-       <button disabled v-show="status==3">活动已结束</button>
+       <button disabled v-show="status==2">活动已结束</button>
        <button  @click="btn" class="participation" v-show="status==1">立即参与</button>
      </div>
   </div>
 </template>
 
 <script>
+import { Auth } from '../../../../mixins'
 import axios from 'axios'
+import storage from '../../../../utils/storage'
 export default {
   name: 'Hello-Parcel',
+  mixins: [Auth],
   data() {
     return {
       message:'',
       status:1,
       text:'',
       no_buy:1,
+      title:''
     }
   },
   methods:{
@@ -53,19 +56,41 @@ export default {
       }    
     },
     btn(){
-      this.$router.push('/home');
+      this.$http.get(`/sign/checkphone`, {
+        iphone: this.message,
+        openid: this.openid
+      }).then(res => {
+        const data=res.data.data
+        // if(data.is_buy==1){
+           this.$router.push('/home');
+        // }
+      }).catch(err=>{
+        console.log(err)
+      })
     },
-    
-
+    getsign() {
+      this.$http.get('/sign/getsign').then(res => {
+      //  alert(res);
+          const data=res.data.data[0];
+          this.title=data.title
+          console.log(this.title)
+          this.status=data.status
+      })
+      .catch(err=>{
+        console.log(err)
+      })
+    }
+  },
+  created() {
+    const user = storage.get('user') || {}
+    if (user.openid) {
+      this.getsign()
+    } else {
+      this.getOpenid().then(this.getsign)
+    }
   },
   mounted(){
-      // axios.get('https://app.playplus.cn/playboom/api/sign/getsign')
-      //   .then(res=>{
-      //     console.log(res)
-      //   })
-      //   .catch(err=>{
-      //     console.log(err)
-      //   })
+    
   }
 }
 </script>

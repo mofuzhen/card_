@@ -194,15 +194,17 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "input" }, [
         _c("div", { staticClass: "input-item" }, [
-          _c("input", { attrs: { type: "text", placeholder: "收货手机号" } })
+          _c("input", { attrs: { type: "text", placeholder: "收件人姓名" } })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "input-item" }, [
-          _c("input", { attrs: { type: "text", placeholder: "手机号密码" } })
+          _c("input", { attrs: { type: "text", placeholder: "收件人手机号" } })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "input-item" }, [
-          _c("input", { attrs: { type: "text", placeholder: "收货地址" } })
+          _c("input", {
+            attrs: { type: "text", placeholder: "收件人收货地址" }
+          })
         ])
       ])
     ])
@@ -268,7 +270,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49823" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50282" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
